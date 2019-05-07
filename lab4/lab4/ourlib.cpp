@@ -49,9 +49,7 @@ void megazip::unpack(ifstream &outfile, string name)
 			outfile.get(sym);
 			if (sym == '[')
 			{
-				ofstream infile;
-				//infile.close();
-				//outfile.get(sym);
+				infile.close();
 				string line;
 				getline(outfile, line, ']');
 				cout << line << endl;
@@ -79,7 +77,6 @@ void megazip::unpack(ifstream &outfile, string name)
 					{
 						for (int i = 0; i < num; i++)
 						{
-							cout << "sym";
 							infile << sym;
 						}
 					}
